@@ -5,15 +5,8 @@
 -- Run from the repo root:
 --   duckdb hm.duckdb -c ".read sql/00_load_data.sql"
 --
--- Notes
---   * This is the only file that is DuckDB-specific: read_csv() is how
---     DuckDB imports a CSV. In PostgreSQL you would CREATE TABLE and then
---     use COPY; in SQL Server, BULK INSERT or the import wizard.
---   * article_id / customer_id are loaded as text so the leading zeros
---     in article IDs (e.g. 0108775015) are preserved.
---   * sample_submission.csv is not used - it is only for the Kaggle
---     recommendation competition.
--- =====================================================================
+--
+--   *
 
 -- ---------- Products ----------
 DROP TABLE IF EXISTS articles;
